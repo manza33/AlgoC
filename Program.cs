@@ -10,6 +10,15 @@ namespace AlgoC
     {
         public static void Main(string[] args)
         {
+
+            Caisse maCaisse = new Caisse();
+            Console.WriteLine($"Total : { maCaisse.calculerSomme()}");
+            Console.WriteLine($"Encaissement : { maCaisse.encaisser()}");
+            maCaisse.rendreMonnaie();
+
+
+/*
+            // TRIANGLES
             TriangleXo triangleXo = new TriangleXo(8);
             triangleXo.dessineTriangle();
 
@@ -19,7 +28,8 @@ namespace AlgoC
 
             TriangleReverse triangleReverse = new TriangleReverse(9);
             triangleReverse.dessineTriangleReverse();
-            
+            //**************************************************************************
+*/
         }
     }
 }
