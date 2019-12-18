@@ -10,7 +10,7 @@ namespace AlgoC
     {
         public static void Main(string[] args)
         {
-            
+            //
             //CHEVAUX2 (11)
             
             CourseChevaux2 course = new CourseChevaux2();
