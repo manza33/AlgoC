@@ -44,9 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Caisse.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="CourseChevaux.cs" />
+    <Compile Include="CourseChevaux2.cs" />
+    <Compile Include="MaxNumber.cs" />
+    <Compile Include="Operation.cs" />
+    <Compile Include="NombrePlusDix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuelNombre1_2.cs" />
+    <Compile Include="tableMulti.cs" />
     <Compile Include="Triangles.cs" />
   </ItemGroup>
   <ItemGroup>

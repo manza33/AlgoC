@@ -25,40 +25,65 @@ namespace AlgoC
         public int calculerSomme()
         {
             somme = 0;
+            prixSaisi = -1;
             do
             {
                 Console.WriteLine("Veuillez saisir le prix du produit");
                 string entree = Console.ReadLine();
 
-                if ( entree != "" )
+                if (int.TryParse(entree, out int intEntree))
                 {
-                    prixSaisi = int.Parse(entree);
+                    prixSaisi = intEntree;
                     somme = somme + prixSaisi;
+                }
+                else
+                {
+                    Console.WriteLine("Vous n'avez pas saisi un nombre.");
                 }
 
             } while (prixSaisi != 0);
-            
+
             return somme;
         }
-        
+
         public int encaisser()
         {
-            string entree;          
-            Console.WriteLine("Veuillez me saisir la monnaie encaissée");
-            monnaieEncaissée = int.Parse(Console.ReadLine());
 
-             while (monnaieEncaissée < somme)
+            Console.WriteLine("Veuillez me saisir la monnaie encaissée");
+            string entree = Console.ReadLine();
+
+            if (int.TryParse(entree, out int intEntree))
+            {
+                monnaieEncaissée = intEntree;
+            }
+            else
+            {
+                Console.WriteLine("Vous n'avez pas saisi un nombre.");
+            }
+
+            while (monnaieEncaissée < somme)
             {
                 Console.WriteLine("La monnaie n'est pas suffisante.");
                 Console.WriteLine("Veuillez me saisir la monnaie encaissée");
-                monnaieEncaissée = int.Parse(Console.ReadLine());
+                entree = Console.ReadLine();
+
+
+                if (int.TryParse(entree, out intEntree))
+                {
+                    monnaieEncaissée = intEntree;
+                }
+                else
+                {
+                    Console.WriteLine("Vous n'avez pas saisi un nombre.");
+                }
             }
+
             return monnaieEncaissée;
         }
 
         public void rendreMonnaie()
         {
-            int billet;
+            //int billet;
 
             if (monnaieEncaissée > somme)
             {
@@ -66,12 +91,12 @@ namespace AlgoC
 
                 Console.WriteLine($"monnaie a rendre : {reste}");
                 Console.WriteLine($"Taille listBillet : {listBillets.Length}");
-                
-                for (int i = 0; i < listBillets.Length; i++)
-                {
-                    billet = listBillets[i];
-                    
 
+                //for (int i = 0; i < listBillets.Length; i++)
+                foreach (int billet in listBillets)
+                {
+
+                    //    billet = listBillets[i];      
 
                     while (reste >= billet)
                     {
@@ -85,7 +110,7 @@ namespace AlgoC
                 Console.WriteLine("Pas de monnaie à rendre");
             }
         }
-        
+
         public string afficheEuro(int billet)
         {
             if (billet > 1)
@@ -96,3 +121,4 @@ namespace AlgoC
         }
     }
 }
+
