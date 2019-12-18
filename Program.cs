@@ -10,7 +10,7 @@ namespace AlgoC
     {
         public static void Main(string[] args)
         {
-            //
+            
             //CHEVAUX2 (11)
             
             CourseChevaux2 course = new CourseChevaux2();
@@ -64,13 +64,12 @@ namespace AlgoC
             */
 
             // CAISSE (10)
-            /*
+            
             Caisse maCaisse = new Caisse();
             Console.WriteLine($"Total : { maCaisse.calculerSomme()}");
             Console.WriteLine($"Encaissement : { maCaisse.encaisser()}");
-            Console.WriteLine($"Encaissement : { maCaisse.encaisser()}");
             maCaisse.rendreMonnaie();
-            */
+            
 
             /*
             // TRIANGLES
